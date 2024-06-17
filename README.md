@@ -1,2 +1,2 @@
 # PythonPractice
-Python 기초 연습
+Python 기초문법 연습
