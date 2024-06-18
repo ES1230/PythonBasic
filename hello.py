@@ -42,3 +42,46 @@ print(result)
 a='02-1234-1234'
 text=a.split('-')[0]
 print(text)
+print("--------------------")
+
+#함수
+def sum(a,b):
+    print('a랑 b를 더합니다')
+    return a+b
+
+result = sum(1,2)
+print(result)
+
+def bus_rate(age):
+    if age>65:
+        print('무료입니다')
+    elif age>20:
+        print('성인입니다')
+    else:
+        print('청소년입니다')
+
+bus_rate(50)
+
+#성별 추출하기
+def check_gender(pin):
+    if (pin[7]=='1' or pin[7]=='3'):
+        print('남성입니다')
+    else:
+        print('여성입니다')
+
+check_gender('000101-1012345')
+check_gender('000101-2012345')
+check_gender('000101-4012345')
+
+#성별추출 다른방법
+def check_gender(pin):
+    num = pin.split('-')[1][:1]
+    if int(num)%2!=0:
+        print('남성입니다')
+    else:
+        print('여성입니다')
+
+check_gender('000101-1012345')
+check_gender('000101-2012345')
+check_gender('000101-4012345')
+
